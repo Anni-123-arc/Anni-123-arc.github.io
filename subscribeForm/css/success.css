@@ -1,0 +1,71 @@
+/* ##################### variables################## */
+:root {
+    --primary-color: hsl(4, 100%, 67%);
+    --btn-not-clicked: hsl(234, 29%, 20%);
+    --bgcolor: hsl(235, 18%, 26%);
+    --containerbg: hsl(0, 0%, 100%);
+    --primary-font-size: 16px;
+    --primary-heading-font: 700;
+    --text-font: 400;
+}
+
+
+body {
+    background-color: var(--bgcolor);
+}
+
+.main-container {
+    display: flex;
+    width: 260px;
+    min-width: 20%;
+    margin: 200px auto;
+    border: 2px solid black;
+    flex-direction: column;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: var(--containerbg);
+}
+
+ 
+
+.main-container .ack {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-container .ack .primary-para {
+    font-size: var(--primary-font-size);
+    font-weight: var(--text-font);
+    color: black;
+    margin-top: -15px;
+}
+
+.main-container .btn {
+    display: block;
+    margin: auto;
+    /* border: 2px solid green; */
+    width: 100%;
+}
+
+.main-container .btn button {
+    min-width: 100%;
+    background-color: var(--btn-not-clicked);
+    color: white;
+    font-size: var(--primary-font-size);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.main-container .btn button a {
+    color: white;
+    font-size: var(--primary-font-size);
+    text-decoration: none;
+}
+
+.main-container .btn button:hover {
+    background-color: var(--primary-color);
+    box-shadow: 5px 5px 5px var(--primary-color);
+
+}

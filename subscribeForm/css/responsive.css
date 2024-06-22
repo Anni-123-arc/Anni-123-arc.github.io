@@ -1,0 +1,101 @@
+.main-container {
+    display: flex;
+    width: 100%;
+    /* border: 2px solid red; */
+    margin: 60px auto;
+    justify-content: center;
+    /* align-items: center; */
+    /* justify-self: center; */
+    border-radius: 30px;
+    background-color: var(--containerbg);
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.main-container .hero-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(/images/images/illustration-sign-up-mobile.svg);
+    width: 85vw;
+    /* border: 2px solid black; */
+    height: 35vh;
+    padding: 10px;
+}
+.main-container .hero-image img{
+    display: none;
+}
+
+
+.main-container .info-form-container {
+    display: flex;
+    flex-direction: column;
+    padding: 40px 22px;
+    /* border: 2px solid green; */
+    width: 80vw;
+}
+
+.main-container .info-form-container {
+    display: flex;
+    flex-direction: column;
+    padding: 40px 22px;
+    /* border: 2px solid green; */
+    width: 80vw;
+}
+
+.main-container .info-form-container .info {
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+    justify-content: center;
+    /* border: 2px solid hotpink; */
+    align-content: center;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+
+.main-container .info-form-container .info .primary-heading {
+    text-align: center;
+    font-size: 40px;
+    font-weight: var(--primary-heading-font);
+}
+
+.main-container .info-form-container .info .primary-para {
+    /* text-align: center; */
+    font-size: 16px;
+    font-weight: var(--text-font);
+    margin-left: 0px;
+    margin-top: -20px;
+}
+
+
+.main-container .info-form-container .info .tick-points {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    list-style: url(/images/images/icon-list.svg);
+
+    font-size: var(--text-font);
+    margin-left: 0;
+    align-items: flex-start;
+    margin-top: 0px;
+}
+
+.main-container .form label {
+    font-size: 10px;
+    margin-left: -20vw;
+}
+
+.main-container .form button {
+    margin-left: 0px;
+    width: 62%;
+    height: 6vh;
+    margin-top: 10px;
+    background-color: var(--btn-not-clicked);
+    color: white;
+    font-size: var(--primary-font-size);
+    border-radius: 5px;
+    cursor: pointer;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" media="screen and (max-width:900px)" href="css/responsive.css">
+</head>
+<body>
+   <!-- ########################### main-container ########################## -->
+    <div class="main-container">
+        <div class="info-form-container">
+            <div class="info">
+               <h1 class="primary-heading">Stay updated!</h1>
+               <p class="primary-para">
+                Join 60,000+ product managers receiving monthly updates on
+               </p>
+               <ul class="tick-points">
+                <li>Product discovery and building what matters</li>
+                <li>mesuring to ensure update are success</li>
+                <li>And much more</li>
+               </ul>
+            </div>
+            <!-- ################### Form ####################### -->
+            <form onsubmit="return status()" action="success.html" class="form">
+                <label for="email">Email address</label>
+                <input type="email" id="eamil" name="email">
+                <button type="submit">Subscribe to monthly news letter</button>
+            </form>
+            <!-- ################## End Form ######################### -->
+        </div>
+        <!-- ############### Hero Image########################## -->
+        <div class="hero-image">
+            <img src= "images/images/illustration-sign-up-desktop.svg" alt="no-image">
+        </div>
+        <!-- ################ Hero image Ends here################## -->
+    </div>
+ <!-- ################################# main-container Ends here###################### -->
+
+ <!-- ############link javascript############# -->
+  <script src="validation.js"></script>
+</body>
+</html>
