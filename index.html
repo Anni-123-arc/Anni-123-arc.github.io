@@ -163,12 +163,11 @@
                     </div>
                     <div class="back">
                         <ul>
-                            <li><a href="/article/index.html">Gym website</a></li>
-                            <li><a href="/ECwid homepage clone/index.html">Ecommerce website's homepage clone</a></li>
-                            <li><a href="/clone/index.html">Lobe website clone</a></li>
+                            <a href="/article/index.html">Gym website</a>
+                            <a href="/ECwid homepage clone/index.html">Ecommerce website's homepage clone</a>
+                            <a href="/clone/index.html">Lobe website clone</a>
                         </ul>
                     </div>
-
                 </div>
             </div>
         </div>
@@ -253,22 +252,22 @@
 
     <script>
 
-const email = document.getElementById('email');
-const txt = document.getElementById('txt');
+        const email = document.getElementById('email');
+        const txt = document.getElementById('txt');
 
- if (email.value === '' || txt.value === '') {
-    const btn = document.getElementById('btn-sent');
-        const image = document.getElementById('image');
+        if (email.value === '' || txt.value === '') {
+            const btn = document.getElementById('btn-sent');
+            const image = document.getElementById('image');
 
-        function statusUpdate() {
-            image.src = 'images/msg-sent.svg';
+            function statusUpdate() {
+                image.src = 'images/msg-sent.svg';
 
+            }
+
+            btn.addEventListener('click', statusUpdate);
         }
 
-        btn.addEventListener('click', statusUpdate);
- } 
-    
- 
+
 
 
 
