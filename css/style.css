@@ -1,0 +1,867 @@
+/* ######################################## Variable Declaration############################################## */
+:root {
+    --primary-accent-color: #FF8C00;
+    --background-color: #121212;
+    --secondary-background-color: #1E1E1E;
+    --text-color: #E0E0E0;
+    --secondary-text-color: #A0A0A0;
+    --accent-color: #00BCD4;
+    --text-area-bg: rgb(179, 137, 92);
+    --title-color: black;
+    --subtitle: #615c5c;
+    --font-family: "Ubuntu", sans-serif;
+    --title-weight: 700;
+    --text-weight: 400;
+    --text-size: 16px;
+    --title-size: 35px;
+    --bgc: rgb(104, 104, 205);
+}
+
+/* ########################################### End Variable Declaration##################################################  */
+html{
+    scroll-behavior: smooth;
+}
+body {
+    margin: 0;
+    padding: 0;
+    /* height: 5000px; */
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+
+/* #################################################### side nav ###################################################################### */
+
+/* The side navigation menu */
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 10; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: #111; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  }
+  
+  /* The navigation menu links */
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  /* Position and style the close button (top right corner) */
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  /*################################################################# End side nav ##############################################################  */
+/* ############################################# Begin Designing of navigation bar################################################ */
+
+.header {
+    /* display: block; */
+    /* position: absolute; */
+    width: 100%;
+    /* height: 250px; */
+    /* border: 2px solid red; */
+    margin: -100px 0px;
+    background-color: var(--secondary-background-color);
+    color: var(--text-color);
+    position: fixed;
+    z-index: 1;
+    opacity: 0.85;
+}
+
+.header .navbar {
+    display: flex;
+    width: 80%;
+    /* max-width: 900px; */
+    min-width: 500px;
+    /* border: 2px solid green; */
+    justify-content: center;
+    align-items: center;
+    margin: 0px auto;
+    /* position: sticky; */
+    /* background-color: var(--bgc); */
+    /* background-color: var(--accent-color); */
+
+ }
+
+.header .navbar .logo {
+    display: block;
+    padding: auto px;
+    width: 10%;
+    /* border: 2px solid black; */
+}
+
+.header .navbar .logo img {
+    width: 100px;
+    cursor: pointer;
+    filter: invert(1);
+}
+
+
+.header .navbar .navigation {
+    width: 80%;
+    /* border: 2px solid hotpink; */
+    align-items: center;
+    justify-content: center;
+    /* margin: 0px auto; */
+
+}
+
+.header .navbar .navigation .nav-items {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    font-size: var(--text-size);
+    margin: 0px 15px;
+    justify-content: center;
+}
+
+.header .navbar .navigation .nav-items li {
+    margin: 0px 5px;
+}
+
+
+.header .navbar .navigation .nav-items li a {
+    padding: 5px;
+    font-family: var(--font-family);
+    font-size: var(--text-size);
+    text-decoration: none;
+    text-align: center;
+    color: var(--text-color);
+    margin: 0 15px;    /* transform: scale(1); */
+    transition: all 1s ease;
+
+}
+
+.header .navbar .navigation .nav-items li a:hover {
+    /* transform: scale(1.15); */
+    /* font-size: px; */
+    color: var(--accent-color);
+}
+
+
+.header .navbar .more {
+    display: none;
+    width: 10%;
+    /* border: 2px solid blue; */
+
+
+}
+
+
+.header .navbar .more img {
+    display: block;
+    width: 30px;
+    margin: 0px auto;
+    cursor: pointer;
+
+
+}
+
+@media screen and (max-width : 769px) {
+
+    .header .navbar {
+        display: flex;
+        width: 80%;
+        /* max-width: 900px; */
+        min-width: 280px;
+        /* border: 2px solid green; */
+        justify-content: center;
+        align-items: center;
+        margin: 0px auto;
+        /* position: sticky; */
+        /* background-color: var(--bgc); */
+        /* background-color: var(--accent-color); */
+    }
+
+    .header .navbar .logo {
+        display: flex;
+        justify-content: flex-start;
+        padding: auto px;
+        width: 10%;
+        /* border: 2px solid black; */
+        margin-right: auto;
+    }
+    
+    .header .navbar .more {
+        display: flex;
+        width: 10%;
+        /* border: 2px solid blue; */
+        flex-direction: row;
+        margin-left: auto;
+        justify-content: flex-end;
+        align-items: center;
+        align-content: center;
+    }
+    .header .navbar .more img{
+        filter: invert(1);
+    }
+    .header .navbar .navigation {
+        display: none;
+        width: 80%;
+        /* border: 2px solid hotpink; */
+        align-items: center;
+        justify-content: center;
+        /* margin: 0px auto; */
+    }
+}
+/* ################################################### End designing of navigation bar#####################################################33 */
+
+/* ################# hero section######################### */
+
+.hero-container {
+    width: 100%;
+    /* height: 250px; */
+
+    /* border: 2px solid red; */
+    margin: 100px 0px;
+}
+
+.hero-container .landing-container {
+    display: flex;
+    width: 80%;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 20px auto;   
+    /* border: 2px solid red; */
+}
+
+.hero-container .landing-container .intro {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    min-width: 200px;
+    max-width: 500px;
+    /* align-items: center; */
+    justify-content: center;
+   
+
+}
+
+.primary-heading{
+    font-family: var(--font-family);
+    font-weight: var(--title-weight);
+    font-size: var(--title-size);
+    letter-spacing: 5px;
+}
+
+.btn {
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 10px 0px
+
+}
+
+.para{
+    font-family: var(--font-family);
+    font-weight: var(--text-weight);
+    font-size: var(--text-size);
+    line-height: 25px;
+}
+
+.btn .hire-me{
+    margin: 0px 20px;
+}
+
+.btn .hire-me a{
+    font-family: var(--font-family);
+    font-weight: var(--text-weight);
+    font-size: var(--text-size);
+    text-decoration: none;
+    text-align: center;
+    padding: 5px;
+    color:black
+
+}
+
+.btn .View-resume a{
+    font-family: var(--font-family);
+    font-weight: var(--text-weight);
+    font-size: var(--text-size);
+    text-decoration: none;
+    text-align: center;
+    padding: 5px;
+    color:black
+
+}
+
+button{
+    height: 30px;
+    background-color: var(--primary-accent-color);
+    border-radius: 5px;
+    transform: scale(1);
+    transition: all 1s ease;
+
+}
+button:hover{
+    transform: scale(1.15);
+    background-color: var(--accent-color);
+
+}
+
+
+.hero-container .landing-container .landing-image{
+    display: flex;
+    width: 50%;
+    min-width: 200px;
+    max-width: 500px;
+    justify-content: center;
+    align-items: center;
+    filter: invert(0);
+}
+
+
+.hero-container .landing-container .landing-image img{
+    width: 100%;
+   
+}
+
+.landing-container-reverse{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+/* ####################################################### End Designing of Hero section#############################################3 */
+
+/* ########################################################### Designing of achievements Section ############################################### */
+
+.Achievements{
+    width: 100%;
+    /* border: 2px solid red; */
+    /* background-color: var(--primary-color); */
+
+}
+
+.Achievements .timeline{
+   position: relative;
+   width: 80%;
+   /* border: 2px solid green; */
+   margin: 35px auto;
+   /* animation: movetimeline 3s ease; */
+    /* animation-timeline: scroll(); */
+
+   /*  */
+ 
+}
+
+.timeline::after{
+    content: '';
+    position: absolute;
+    background-color: white;
+    width: 6px;
+    top: 0;
+    bottom: 0;
+    left: 49%;
+    animation: movetimeline 3s ease;
+    animation-direction: normal;
+    /* animation-timeline: scroll(); */
+ }
+
+ @keyframes movetimeline {
+    0%{
+        height: 0%;
+    }
+    100%{
+        height: 100%;
+    }
+ }
+
+.Achievements .timeline .container{
+    position: relative;
+    width: 45%;
+    max-width: 800px;
+    background-color: var(--primary-color);
+    /* border: 2px solid black; */
+    padding: 10px 20px;
+    
+    opacity: 1;
+    
+    /* margin: 0px 10px;  */
+}
+
+@keyframes  moveboxes {
+    0%{
+        transform: translateX(-40px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+
+
+.Achievements .timeline .right::after{
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top: 20px;
+    left: -27px;
+    border-radius: 50%;
+    background-color: var(--accent-color);
+    border: 6px solid var(--text-color);
+    z-index: 1;
+}
+
+@keyframes  moveleft {
+    0%{
+        transform: translateX(40px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(-40px);
+        opacity: 1;
+    }
+}
+
+
+.Achievements .timeline .left::after{
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top: 20px;
+    right: -30px;
+    border-radius: 50%;
+    background-color: var(--accent-color);
+    border: 6px solid var(--text-color);
+    z-index: 1;
+}
+
+
+.content{
+    padding: 0px 10px;
+    /* background-color: white; */
+    border-radius: 15px;
+    background-color: var(--primary-color);
+
+}
+
+.left{
+    left: 0%;
+    animation: moveboxes 2s ease 0s;
+}
+
+.right{
+    left: 50%;
+    animation: moveleft 2s ease 0s;
+
+}
+
+@keyframes  moveleft {
+    0%{
+        transform: translateX(40px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(-40px);
+        opacity: 1;
+    }
+}
+
+
+@keyframes  moveleft {
+    0%{
+        transform: translateX(40px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width : 769px) {
+    .Achievements .timeline .left::after {
+        content: '';
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        top: 20px;
+        right: -7px;
+        border-radius: 50%;
+        background-color: var(--accent-color);
+        border: 6px solid var(--text-color);
+        z-index: 1;
+    }
+
+    .Achievements .timeline .right::after {
+        content: '';
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        top: 20px;
+        left: -21px;
+        border-radius: 50%;
+        background-color: var(--accent-color);
+        border: 6px solid var(--text-color);
+        z-index: 1;
+    }
+}
+
+@media screen and (max-width : 1024px) {
+    .Achievements .timeline .left::after {
+        content: '';
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        top: 20px;
+        right: -7px;
+        border-radius: 50%;
+        background-color: var(--accent-color);
+        border: 6px solid var(--text-color);
+        z-index: 1;
+    }
+
+    .Achievements .timeline .right::after {
+        content: '';
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        top: 20px;
+        left: -22px;
+        border-radius: 50%;
+        background-color: var(--accent-color);
+        border: 6px solid var(--text-color);
+        z-index: 1;
+    }
+}
+
+/* ######################################################################## Designing of projects section ################################################# */
+
+ .projects{
+    width: 100%;
+    /* border: 2px solid red; */
+ }
+
+.image img{
+    filter: invert(1);
+    border: 10px solid orange;
+    width: 50px;
+    border-radius: 50%;
+ }
+
+ .projects .project-container{
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid red; */
+    margin: 0px auto;
+ }
+
+ .projects .project-container .inner-project-container{
+    background-color: transparent;
+    width: 300px;
+    height: 200px;
+    border: 1px solid #f1f1f1;
+    perspective: 1000px;
+ }
+
+ .projects .project-container .inner-project-container .project-card{
+    position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+ }
+
+ .inner-project-container:hover .project-card {
+    transform: rotateX(180deg);
+  }
+
+  .front, .back {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+
+  .front {
+    background-color: var( --accent-color);
+    color: black;
+  }
+
+  .front img{
+    width: 50px;
+    border: 15px solid var(--primary-accent-color);
+    border-radius: 50%;
+  }
+  .back {
+    background-color:var( --primary-accent-color);
+    color: white;
+    transform: rotateX(180deg);
+  }
+
+  .back ul{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+  }
+/*  ####################################################################### End Designing of projects section ###################################################3333 */
+
+/* ########################################################### Designing of Contact section ######################################################## */
+
+#contact{
+    width: 100%;
+    /* border: 2px solid red; */
+    margin: 30px 0px;
+}
+
+
+.secondary-heading{
+    font-size: 35px;
+    text-align: center;
+    font-family: var(--font-family);
+    color: var(--secondary-color);
+    background-color: var(--accent-color);
+
+}
+
+.ternary-headaing{
+    font-size: 25px;
+    font-family: var(--font-family);
+
+}
+
+#contact .inner-contact{
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: 0px auto;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid green; */
+}
+
+#contact .inner-contact .form{
+    display: flex;
+    width: 40%;
+    flex-direction: column;
+    justify-content: center; 
+    /* align-items: center; */
+    /* border: 2px solid green; */
+     
+}
+
+#contact .inner-contact .form .form-container{
+    margin: 0px 35px;
+}
+
+
+#contact .inner-contact .form .inputs{
+      display: flex;
+      flex-direction: column;
+      font-family: var(--font-family);
+      margin: 10px 0px;
+
+
+}
+
+#contact .inner-contact .form .inputs input , textarea {
+    width: 80%;
+    height: 25px;
+}
+
+#contact .inner-contact .form .btn{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    /* justify-content: center; */
+}
+#contact .inner-contact .form .btn button{
+    width: 80%;
+    height: 25px;
+}
+
+a{
+    text-decoration: none;
+    font-size: var(--text-size);
+    font-family: var(--font-family);
+    color: var(--title-color);
+}
+
+#contact .inner-contact .image-illustration{
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid black; */
+    /* margin: 0px auto; */
+}
+
+#contact .inner-contact .image-illustration img{
+    width: 80%;
+}
+
+/* ################################################################# End of contact section ######################################################## */
+
+/* ########################################################### Designing of References section #################################### */
+
+.footer{
+    width: 100%;
+    /* border: 2px solid red; */
+    background-color: var(--accent-color);
+
+}
+
+.footer .inner-footer{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 80%;
+    margin: 0px auto;
+    /* justify-content: center; */
+    align-items: center;
+    /* border: 2px solid green; */
+}
+
+.footer .inner-footer .non-legal{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    /* align-items: center; */
+    /* background-color: black; */
+    margin: 26px 0px;
+}
+
+.footer .inner-footer .non-legal .non-legal-footer-item{
+    display: flex;
+    /* flex-direction: column; */
+    width: 33%;
+    /* border: 2px solid hotpink; */
+    justify-content: center;
+    /* align-items: center; */
+}
+
+.footer .inner-footer .non-legal .non-legal-footer-item .footer-logo{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer .inner-footer .non-legal .non-legal-footer-item .footer-logo img{
+    width: 200px;
+    filter: invert(1);
+
+}
+
+.footer .inner-footer .non-legal .non-legal-footer-item .footer-nav{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer .inner-footer .non-legal .non-legal-footer-item .footer-nav .social-media{
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.footer .inner-footer .non-legal .non-legal-footer-item .footer-nav .social-media img{
+    filter: invert(1);
+    cursor: pointer;
+}
+
+.footer .inner-footer .non-legal .non-legal-footer-item .google-location{
+    display: flex;
+   width: 100%; 
+   justify-content: center;
+   align-items: center;
+}
+
+
+.footer .inner-footer .non-legal .non-legal-footer-item .google-location iframe{
+    width: 80%;
+    border-radius: 15px;
+    height: 200px;
+}
+
+.footer .inner-footer .legal{
+    padding: 10px 0px;
+}
+
+.footer .inner-footer .legal small{
+    color: white;
+    font-size: var(--text-size);
+
+}
+
+@media screen and (max-width:768px) {
+    .footer .inner-footer .non-legal {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        /* align-items: center; */
+        /* background-color: black; */
+        margin: 26px 0px;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+    
+    
+    }
+    
+    .footer .inner-footer .non-legal .non-legal-footer-item .footer-nav .social-media {
+        display: flex;
+        flex-wrap: wrap;
+        width: 80%;
+        justify-content: space-between;
+        align-items: center;
+        margin: 15px 0px;
+    }
+    
+    .footer .inner-footer .non-legal .non-legal-footer-item {
+        display: flex;
+        /* flex-direction: column; */
+        width: 100%;
+        /* border: 2px solid hotpink; */
+        justify-content: center;
+        /* align-items: center; */
+    }
+    
+    .footer .inner-footer .non-legal .non-legal-footer-item {
+        display: flex;
+        /* flex-direction: column; */
+        width: 100%;
+        /* border: 2px solid hotpink; */
+        justify-content: center;
+        /* align-items: center; */
+    }
+}

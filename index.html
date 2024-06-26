@@ -4,50 +4,286 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Article view</title>
-     <link rel="stylesheet" href="style.css"> 
-     <link rel="stylesheet" media="screen and (max-width:780px)" href="responsive.css">
+    <title>Portfolio</title>
+    <!-- ############################## Link Css here ############################################################ -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" media="screen and (max-width: 693px)" href="css/responsive.css">
+
+    <!-- ################################### End Css ####################################################################-->
+
+    <!-- ##################################### Linked Googlen fonts ###################################################33 -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <!-- ##################################### End Googlen fonts ###################################################33 -->
 </head>
 
 <body>
-    <div id="container">
-        <div class="article-image">
-            <img src="https://www.shutterstock.com/image-photo/wooden-coffee-table-houseplant-wicker-600nw-2354732761.jpg"
-                alt="">
+    <!--  ######################################################3 side nav ##################################################### -->
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#hero">Home</a>
+        <a href="#timeline">Academic</a>
+        <a href="#visit-project">Project</a>
+        <a href="#contact">Contact</a>
+    </div>
+    <!-- ######################################################## End side nav ####################################################### -->
+    <!-- ######################## navigation bar######################### -->
+    <header class="header">
+        <div class="navbar">
+            <div class="logo">
+                <img src="images/pngwing.com.png" alt="">
+            </div>
+            <div class="navigation">
+                <ul class="nav-items">
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#timeline">Academic</a></li>
+                    <li><a href="#visit-project">Project</a></li>
+                    <!-- <li><a href="">References</a></li> -->
+                    <li><a href="#contact">contact</a></li>
+                </ul>
+            </div>
+            <div class="more">
+                <img onclick="openNav()" src="images/more.png" alt="">
+            </div>
         </div>
-        <div class="article-content">
-            <h1 id="title">heading</h1>
-            <p id="content">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis provident tempora reprehenderit
-                dolorem quo delectus odio quis saepe     <a href="subscribeForm/index.html">click me</a>
-                nulla dolore asperiores voluptatibus quasi, <a href="/ECwid homepage clone/index.html">Visit Ecwid</a> vero laudantium eveniet
-                molestiae architecto reiciendis molestias quas velit voluptatum veniam recusandae?
-            </p>
-            <div class="profile">
-                <div class="profile-info">
-                    <div class="image">
-                        <img src="user-circle-solid-144.png" alt="">
-                    </div>
-                    <div class="username">
-                        <h2>Anni</h2>
-                    </div>
+    </header>
+    <!-- ################################ End navigation bar############################ -->
+
+    <!-- ################################################## Begin Hero section############################################### -->
+    <section id="hero" class="hero-container">
+        <!-- ############################################# Begin Landing page#################################################### -->
+        <div class="landing-container">
+            <div class="intro">
+                <h1 class="primary-heading"> Welcome to My Portfolio!</h1>
+                <p class="para">
+
+                    I am thrilled to have you visit my portfolio. As a recent graduate eager to make
+                    my mark in the professional world, this space showcases my journey, skills, and the projects I have
+                    passionately worked on. <br>
+                    Whether you're here to explore my projects, learn more about my background, or connect with me for
+                    potential opportunities, I hope you find this portfolio informative and engaging. Thank you for
+                    stopping by, and I look forward to the possibility of working together!
+
+
+                </p>
+                <div class="btn">
+                    <button class="View-resume" type="submit"><a href="">View Resume</a></button>
+                    <button class="hire-me" type="submit"><a href="#contact">Hire me</a></button>
                 </div>
-                <div class="share-button">
+            </div>
+            <div class="landing-image">
+                <img src="images/working.svg" alt="">
+            </div>
+        </div>
+        <!-- ################################################ End Landing page####################################################### -->
 
-                    <ul class="social-links">
-                        <li><img src="instagram-logo-24.png" alt=""></li>
-                        <li><img src="twitter-logo-24.png" alt=""></li>
-                        <li><img src="linkedin-logo-24.png" alt=""></li>
-                    </ul>
+        <!-- ################################################## Begin Introduction ##################################################### -->
+        <div class="landing-container landing-container-reverse">
+            <div class="intro">
+                <h1 class="primary-heading">About Myself</h1>
+                <p class="para">
+                    I'm Aniket a passionate and enthusiastic recent graduate in Information technology. With a solid
+                    foundation in full stack development and hands-on experience from various projects and internships,
+                    I'm excited to start my professional journey.
+                    <br>
+                    My academic background and internships at [Company/Organization] have equipped me with the skills
+                    and creativity to tackle real-world challenges. I'm particularly interested in Machine Learning and
+                    look forward to bringing fresh perspectives and innovative solutions
+                    to new opportunities.
+                    <br>
+                    Thank you for visiting my portfolio!
+                </p>
 
-                    <img class="share-image" src="share-solid-24.png" alt="">
+            </div>
+            <div class="landing-image">
+                <img src="images/intro.svg" alt="">
+            </div>
+        </div>
+        <!-- #########################################End Introduction ################################################################3 -->
+    </section>
+
+    <!-- ###################################################### End hero section########################################### -->
+
+    <!-- ############################################ Academic Achievements ############################################################## -->
+
+    <section id="timeline" class="Achievements">
+        <h2 class="secondary-heading">Skills</h2>
+
+        <div class="timeline">
+            <div class="container left">
+                <div class="content">
+                    <h2 class="secondary-heading">HTML</h2>
+                    <p class="para">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis quibusdam facere fugit
+                        repudiandae numquam eos officia nam et, reiciendis quae, nemo nihil obcaecati? Fuga, eligendi
+                        impedit ipsum a repellendus qui?m
+                    </p>
+
+                </div>
+            </div>
+            <div class="container right">
+                <div class="content">
+                    <h2 class="secondary-heading">CSS</h2>
+                    <p class="para">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis quibusdam facere fugit
+                        repudiandae numquam eos officia nam et, reiciendis quae, nemo nihil obcaecati? Fuga, eligendi
+                        impedit ipsum a repellendus qui?m
+                    </p>
+
+                </div>
+            </div>
+            <div class="container left">
+                <div class="content">
+                    <h2 class="secondary-heading">JAVA SCRIPT</h2>
+                    <p class="para">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis quibusdam facere fugit
+                        repudiandae numquam eos officia nam et, reiciendis quae, nemo nihil obcaecati? Fuga, eligendi
+                        impedit ipsum a repellendus qui?m
+                    </p>
 
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <script src="first.js"></script>
+
+    <!-- ##################################################################### Projects section ########################################################################## -->
+
+    <section id="visit-project" class="projects">
+        <h2 class="secondary-heading">Projects</h2>
+
+        <div class="project-container">
+            <div class="inner-project-container">
+                <div class="project-card">
+                    <div class="front">
+
+                        <img src="images/html5-logo-24.png" alt="">
+
+                    </div>
+                    <div class="back">
+                        <ul>
+                            <li><a href="#">Gym website</a></li>
+                            <li><a href="#">clone of web-pages</a></li>
+                            <li><a href="#">frontend mentor challenges</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- ############################################################################ End Projects section ######################################################################### -->
+
+    <!-- ############################################################# Contact section ########################################################################### -->
+    <section id="contact">
+        <h2 class="secondary-heading">Get in touch</h2>
+        <div class="inner-contact">
+            <div class="form">
+                <form class="form-container" action="">
+                    <h3 class="ternary-headaing">Drop me a mail.</h3>
+
+                    <div class="inputs">
+                        <label for="email">Email</label>
+                        <input id="email" required type="email" name="email">
+                    </div>
+                    <div class="inputs">
+                        <label for="text-area">message</label>
+                        <textarea required name="text-area" id="txt"></textarea>
+                    </div>
+                    <div class="btn "> <button id="btn-sent" onclick="statusUpdate()" type="submit"><a
+                                href="#contact">Sent</a></button></div>
+                </form>
+            </div>
+            <div class="image-illustration">
+                <img id="image" src="images/mail.svg" alt="">
+            </div>
+        </div>
+    </section>
+    <!-- ######################################################################### End contact section ############################################################################## -->
+
+
+
+
+
+
+    <!-- ###################################################### Footer Section ############################################################################### -->
+
+    <footer class="footer">
+        <div class="inner-footer">
+            <div class="non-legal">
+                <div class="non-legal-footer-item">
+                    <div class="footer-logo">
+                        <img src="images/pngwing.com.png" alt="">
+
+                    </div>
+                </div>
+                <div class="non-legal-footer-item ">
+                    <div class="footer-nav">
+                        <div class="btn">
+                            <div class="btn">
+                                <button class="View-resume" type="submit"><a href="">View Resume</a></button>
+                                <button class="hire-me" type="submit"><a href="#contact">Hire me</a></button>
+                            </div>
+                        </div>
+                        <div class="social-media">
+                            <img src="images/instagram-logo-24.png" alt="">
+                            <img src="images/linkedin-logo-24.png" alt="">
+                            <img src="images/twitter-logo-24.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="non-legal-footer-item ">
+                    <div class="google-location">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.8989338414235!2d77.28965652502842!3d19.11208918209994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bce29b9903d053d%3A0x2c5238a90ab55c03!2sShri%20Guru%20Gobind%20Singhji%20Institute%20of%20Engineering%20and%20Technology!5e0!3m2!1sen!2sin!4v1719331930823!5m2!1sen!2sin"
+                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="legal">
+                <small>&copy; all rights reseved|website by aniket gk</small>
+            </div>
+        </div>
+    </footer>
+    <!-- ##################################################### End Footer ######################################################################################## -->
+
+    <script>
+
+const email = document.getElementById('email');
+const txt = document.getElementById('txt');
+
+ if (email.value === '' || txt.value === '') {
+    const btn = document.getElementById('btn-sent');
+        const image = document.getElementById('image');
+
+        function statusUpdate() {
+            image.src = 'images/msg-sent.svg';
+
+        }
+
+        btn.addEventListener('click', statusUpdate);
+ } 
+    
+ 
+
+
+
+
+        /* Set the width of the side navigation to 250px */
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+
+        }
+
+        /* Set the width of the side navigation to 0 */
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+    </script>
 </body>
 
 </html>
