@@ -371,9 +371,10 @@ button:hover{
     top: 0;
     bottom: 0;
     left: 49%;
+ 
     animation: movetimeline 3s ease;
+    /* animation-fill-mode: both; */
     animation-direction: normal;
-    /* animation-timeline: scroll(); */
  }
 
  @keyframes movetimeline {
