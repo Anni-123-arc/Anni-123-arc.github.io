@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const billInput = document.getElementById('bill');
     const tipButtons = document.querySelectorAll('button[id^="btn"]');
     const customTipInput = document.getElementById('custom');
+    const buttonCustom =document.getElementById('btncustom');
     const peopleInput = document.getElementById('headCount');
     const tipAmountDisplay = document.getElementById('distributeTip');
     const totalAmountDisplay = document.getElementById('distributeTotal');
@@ -16,10 +17,16 @@ document.addEventListener("DOMContentLoaded", function() {
     peopleInput.addEventListener('input', updatePeople);
     resetButton.addEventListener('click', resetCalculator);
 
+    buttonCustom.addEventListener('click',customTip);
+    
+    function customTip( ) {
+        customTip.style.visibillity = 'visible';
+    }
+
     tipButtons.forEach(button => {
         button.addEventListener('click', function() {
             tipPercentage = parseInt(this.innerText.replace('%', ''));
-            customTipInput.classList.add('hidden');
+            // customTipInput.classList.add('visible');
             calculateTip();
         });
     });
