@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./output.css">
+    <link rel="stylesheet" href="./custom.css">
+</head>
+
+<body>
+
+    <!-- ############################################### Navbar ############################################ -->
+    <div id="navbar" class="flex space-x-6 items-center p-5 md:w-4/5 md:mx-auto md:px-0 sticky  ">
+        <div>
+            <img onclick="displayMenu()" class="md:hidden" src="./images/icon-menu.svg" alt="Hamburger">
+        </div>
+
+        <img src="./images/logo.svg" alt="Brand logo">
+
+        <ul
+            class="hidden  md:visible md:flex md:items-center md:space-x-6 md:text-lg md:font-semibold md:text-gray-500  md:w-fit md:mx-auto md:justify-between">
+            <li class=""><a href="#">collection</a></li>
+            <li class=""><a href="#">Men</a></li>
+            <li class=""><a href="#">Women</a></li>
+            <li class=""><a href="#">About</a></li>
+            <li class=""><a href="#">Contact</a></li>
+        </ul>
+
+        <div class="crt relative" onclick="displayCart()">
+            <img class="" src="./images/icon-cart.svg" alt="cart">
+            <span id="orderNumber"
+                class="absolute top-[-8px] right-[-8px]  w-4 h-4 rounded-full bg-red-900 text-white text-xs mx-auto">10</span>
+        </div>
+        <img class="w-8" src="./images/image-avatar.png" alt="avtar">
+    </div>
+
+    <div id="menu" class="w-full absolute bg-[#e0763a] z-30 hidden">
+        <ul class="flex flex-col space-y-3 justify-center items-center">
+            <li>Home</li>
+            <li>Men</li>
+            <li>Women</li>
+            <li>Contact</li>
+            <li>About</li>
+        </ul>
+    </div>
+
+    <!-- ########################################## End navbar ############################################ -->
+
+    <!-- #################################### Product display ########################################################### -->
+
+    <div class="md:flex md:p-5 md:w-4/5 md:justify-center md:mx-auto md:items-center md:space-x-8">
+        <div class="w-dvw relatives   md:justify-center  md:flex md:flex-col md:items-center md:w-[50%] ">
+            <div class="Myslides hidden md:w-full md:p-8 ">
+                <img class="rounded-lg md:w-4/6 md:mx-auto" src="./images/image-product-1.jpg" alt="">
+            </div>
+            <div class="Myslides hidden md:w-full md:p-8 ">
+                <img class="rounded-lg md:w-4/6 md:mx-auto" src="./images/image-product-2.jpg" alt="">
+            </div>
+            <div class="Myslides hidden md:w-full md:p-8 ">
+                <img class="rounded-lg md:w-4/6 md:mx-auto" src="./images/image-product-3.jpg" alt="">
+            </div>
+            <div class="Myslides hidden md:w-full md:p-8 ">
+                <img class="rounded-lg md:w-4/6 md:mx-auto" src="./images/image-product-4.jpg alt="">
+            </div>
+
+            <div class="md:w-4/5 md:grid md:grid-cols-4 md:grid-rows-1 gap-4 md:p-5">
+                <img class="rounded-lg opacity-65 hover:opacity-100 ring-2 ring-[#e0763a]" onclick="displayImage(src)" src="./images/image-product-1-thumbnail.jpg" alt="">
+                <img class="rounded-lg opacity-65 hover:opacity-100 ring-2 ring-[#e0763a]" onclick="displayImage(src)" src="./images/image-product-2-thumbnail.jpg" alt="">
+                <img class="rounded-lg opacity-65 hover:opacity-100 ring-2 ring-[#e0763a]" onclick="displayImage(src)" src="./images/image-product-3-thumbnail.jpg" alt="">
+                <img class="rounded-lg opacity-65 hover:opacity-100 ring-2 ring-[#e0763a]" onclick="displayImage(src)" src="./images/image-product-4-thumbnail.jpg" alt="">
+            </div>
+
+            <div id="displayCart"
+                class=" w-[95%] h-96   ml-3 p-3 top-20 absolute border-2 border-white bg-white rounded-lg z-30 hidden">
+                <h1 class="font-semibold h-[20%]">Cart</h1>
+
+                <div class="">
+
+                </div>
+
+            </div>
+
+            <button
+                class="absolute right-3 top-[35%] w-8 h-8 p-2 flex justify-center items-center rounded-full bg-white md:hidden"
+                onclick="nextSlide(1)">
+                <img class="" src="./images/icon-next.svg" alt="">
+            </button>
+
+            <button
+                class="absolute left-3 top-[35%] w-8 h-8 p-2 flex justify-center items-center rounded-full  bg-white md:hidden"
+                onclick="prevSlide(-1)">
+                <img class="" src="./images/icon-previous.svg" alt="">
+            </button>
+        </div>
+
+        <div class="flex flex-col p-5 space-y-5 md:w-[50%] ">
+            <h3 class="font-bold text-gray-400 text-sm md:text-base"> SNEAKER COMPANY </h3>
+            <h1 class="font-bold text-2xl md:text-5xl ">Fall Limited Edition Sneakers</h1>
+            <p class="text-base text-gray-400 font-base"> These low-profile sneakers are your perfect casual wear
+                companion. Featuring a
+                durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+
+            <ul class="flex justify-between items-center">
+                <li>
+                    <h4 class="font-bold text-lg"> $125.00
+                    </h4>
+                </li>
+                <li class="bg-black px-2 rounded-lg text-white">
+                    <span class="font-bold"> 50%
+                    </span>
+                </li>
+                <li>
+                    <small class="text-gray-400 selection:font-bold"> $250.00
+                    </small>
+                </li>
+            </ul>
+            <div class="flex w-full  flex-col space-y-5 md:flex md:flex-row md:justify-between md:items-center">
+                <div class="bg-gray-200 p-3 flex justify-between items-center rounded-lg md:w-[45%]">
+                    <button onclick="incCount(0)"><img src="./images/icon-plus.svg" alt=""></button>
+                    <span id="count" class="font-bold"></span>
+                    <button onclick="decCount()"><img src="./images/icon-minus.svg" alt=""></button>
+                </div>
+
+                <div class="w-full p-3 rounded-lg bg-[#e0763a] md:w-[45%] md:h-full" onclick="order(0)">
+                    <ul class="flex justify-center  space-x-4 items-center">
+                        <li>
+                            <img src="./images/icon-cart.svg" alt="">
+                        </li>
+                        <li>
+                            <span class="font-bold text-lg">Add to cart</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ################################################## End Product display ################################################################### -->
+
+    <script src="Ecom.js"></script>
+
+</body>
+
+</html>
