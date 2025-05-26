@@ -31,6 +31,26 @@
         <p><strong>Age:</strong> 30</p>
         <p><strong>Email:</strong> john.doe@example.com</p>
         <p><strong>Address:</strong> 123 Main Street, Springfield</p>
+        <p id="location"></p>
     </div>
+    <button onclick="getLocatiom">Get Location</button>
 </body>
+<script>
+   function getLocatiom(){
+    if(navigator.geolocation){
+          navigator.geolocation.getCurrentPosition(showPosition , showError)
+    }
+    else{
+        document.getElementById("location").innerText = "browser doesn't support geo Location"
+    }
+   }
+
+   function showPosition(position){
+         document.getElementById("location").innerText = position.coords;
+   }
+   function showError(error){
+              document.getElementById("location").innerText = error.message;
+
+   }
+</script>
 </html>
