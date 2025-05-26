@@ -15,13 +15,19 @@
             border-radius: 8px;
             width: 300px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            margin:auto;
+            margin: auto;
         }
         h2 {
             color: #333;
         }
         p {
             margin: 8px 0;
+        }
+        button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            font-size: 16px;
         }
     </style>
 </head>
@@ -33,24 +39,39 @@
         <p><strong>Address:</strong> 123 Main Street, Springfield</p>
         <p id="location"></p>
     </div>
-    <button onclick="getLocatiom">Get Location</button>
+    <button onclick="getLocation()">Get Location</button>
+
+    <script>
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition, showError);
+            } else {
+                document.getElementById("location").innerText = "Geolocation is not supported by this browser.";
+            }
+        }
+
+        function showPosition(position) {
+            const lat = position.coords.latitude;
+            const lon = position.coords.longitude;
+            document.getElementById("location").innerText = `Latitude: ${lat}, Longitude: ${lon}`;
+        }
+
+        function showError(error) {
+            switch (error.code) {
+                case error.PERMISSION_DENIED:
+                    document.getElementById("location").innerText = "User denied the request for Geolocation.";
+                    break;
+                case error.POSITION_UNAVAILABLE:
+                    document.getElementById("location").innerText = "Location information is unavailable.";
+                    break;
+                case error.TIMEOUT:
+                    document.getElementById("location").innerText = "The request to get user location timed out.";
+                    break;
+                default:
+                    document.getElementById("location").innerText = "An unknown error occurred.";
+                    break;
+            }
+        }
+    </script>
 </body>
-<script>
-   function getLocatiom(){
-    if(navigator.geolocation){
-          navigator.geolocation.getCurrentPosition(showPosition , showError)
-    }
-    else{
-        document.getElementById("location").innerText = "browser doesn't support geo Location"
-    }
-   }
-
-   function showPosition(position){
-         document.getElementById("location").innerText = position.coords;
-   }
-   function showError(error){
-              document.getElementById("location").innerText = error.message;
-
-   }
-</script>
 </html>
